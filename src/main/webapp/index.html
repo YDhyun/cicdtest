@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 디자인 개선</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 기본적인 폰트와 레이아웃 설정 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        .field input, .field textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .field input:focus, .field textarea:focus {
+            border-color: #4caf50;
+            outline: none;
+        }
+
+        .field label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .actions input {
+            padding: 12px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions input:hover {
+            background-color: #45a049;
+        }
+
+        .actions input[type="reset"] {
+            background-color: #f44336;
+        }
+
+        .actions input[type="reset"]:hover {
+            background-color: #e53935;
+        }
+
+        .checkbox-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .checkbox-container label {
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>문의하기</h2>
+    <form action="#" method="post">
+        <div class="field">
+            <label for="demo-email">이메일</label>
+            <input type="email" id="demo-email" name="demo-email" placeholder="이메일을 입력하세요" required>
+        </div>
+
+        <div class="checkbox-container">
+            <div class="field">
+                <input type="checkbox" id="demo-copy" name="demo-copy">
+                <label for="demo-copy">이메일로 사본 보내기</label>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="demo-human" name="demo-human" checked>
+                <label for="demo-human">로봇이 아닙니다</label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="demo-message">메시지</label>
+            <textarea name="demo-message" id="demo-message" placeholder="메시지를 입력하세요" rows="6" required></textarea>
+        </div>
+
+        <div class="actions">
+            <input type="submit" value="보내기" class="primary">
+            <input type="reset" value="초기화">
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
